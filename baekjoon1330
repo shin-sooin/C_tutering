@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main()
+{
+   int i=0, j=0;
+   scanf_s("%d", &i);
+   scanf_s("%d", &j);
+
+   if (i > j)
+      printf(">\n");
+   else if (i < j)
+      printf("<\n");
+   else
+      printf("==");
+   return 0;
+}
