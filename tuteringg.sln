@@ -1,31 +1,27 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30128.74
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tuteringg", "tuteringg\tuteringg.vcxproj", "{9189A2A8-3744-4490-B6C6-A6CBCC061F98}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|x64 = Debug|x64
-		Debug|x86 = Debug|x86
-		Release|x64 = Release|x64
-		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9189A2A8-3744-4490-B6C6-A6CBCC061F98}.Debug|x64.ActiveCfg = Debug|x64
-		{9189A2A8-3744-4490-B6C6-A6CBCC061F98}.Debug|x64.Build.0 = Debug|x64
-		{9189A2A8-3744-4490-B6C6-A6CBCC061F98}.Debug|x86.ActiveCfg = Debug|Win32
-		{9189A2A8-3744-4490-B6C6-A6CBCC061F98}.Debug|x86.Build.0 = Debug|Win32
-		{9189A2A8-3744-4490-B6C6-A6CBCC061F98}.Release|x64.ActiveCfg = Release|x64
-		{9189A2A8-3744-4490-B6C6-A6CBCC061F98}.Release|x64.Build.0 = Release|x64
-		{9189A2A8-3744-4490-B6C6-A6CBCC061F98}.Release|x86.ActiveCfg = Release|Win32
-		{9189A2A8-3744-4490-B6C6-A6CBCC061F98}.Release|x86.Build.0 = Release|Win32
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {CA320AC9-12AF-4F35-9E03-C9A4FD159138}
-	EndGlobalSection
-EndGlobal
+//----------------------------------- 사각형의 넓이 구하기 -------------------------------------------------
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+struct Rectangle {
+    int x1, y1;
+    int x2, y2;
+};
+
+int main()
+{
+    struct Rectangle rect;
+    printf("Type first (x,y): ");
+    scanf_s("%d%d", &rect.x1, &rect.y1);
+    printf("Type second (x,y): ");
+    scanf_s("%d%d", &rect.x2, &rect.y2);
+    int area;
+    int x = rect.x1 - rect.x2;
+    int y = rect.y1 - rect.y2;
+    area = sqrt(x * x * y * y);
+
+    
+    printf("%d\n", area);
+
+    return 0;
+}
